@@ -1,33 +1,33 @@
-# 🎉 Welcome to the Fun Calculator! 🎉
-# We're going to add, subtract, multiply, and divide two numbers like a boss! 😎
+# Basic Calculator Program
 
-# Step 1: Ask the user to input the first number
-# We're using 'float()' to make sure our numbers can have decimals too. Fancy, right? ✨
+# Create a simple Python program that asks the user to input two numbers and a mathematical operation (addition, subtraction, multiplication, or division).
+# Perform the operation based on the user's input and print the result.
+# Example: If a user inputs 10, 5, and +, your program should display 10 + 5 = 15.
+
+# Ask user to enter two numbers
 num1 = float(input("Enter the first number: "))
-
-# Step 2: Ask the user to input the second number
-# Same trick here—using 'float()' for decimal magic! 🧙‍♂️
 num2 = float(input("Enter the second number: "))
 
-# Step 3: Time to do some math! 🧠 Let's compute the sum, difference, product, and quotient.
+# Ask user to select an operation
+operation = input("Enter the operation (+, -, *, /): ")
 
-# Add the two numbers (Yay! Addition is the first step to fun!) ➕
-sum_result = num1 + num2
+# Perform the chosen operation
+if operation == '+':
+    result = num1 + num2
+    print(f"{num1} + {num2} = {result}")
+elif operation == '-':
+    result = num1 - num2
+    print(f"{num1} - {num2} = {result}")
+elif operation == '*':
+    result = num1 * num2
+    print(f"{num1} * {num2} = {result}")
+elif operation == '/':
+    if num2 != 0:
+        result = num1 / num2
+        print(f"{num1} / {num2} = {result}")
+    else:
+        print("Error: Division by zero is not allowed.")
+else:
+    print("Invalid operation. Please choose one of +, -, *, /.")
 
-# Subtract the second number from the first (Negative vibes, but necessary! 😜) ➖
-difference_result = num1 - num2
-
-# Multiply the two numbers (More bang for your buck! 💥) ✖️
-product_result = num1 * num2
-
-# Divide the first number by the second (Be careful with zero here, no math disasters! 😅) ➗
-# We'll assume the user is being responsible and not dividing by zero for now!
-quotient_result = num1 / num2
-
-# Step 4: Show the user what we got! 🥳 Time for the big reveal! 🎉
-print(f"Results of your two numbers:")
-print(f"Sum: {sum_result}")  # ➕
-print(f"Difference: {difference_result}")  # ➖
-print(f"Product: {product_result}")  # ✖️
-print(f"Quotient: {quotient_result}")  # ➗
  
